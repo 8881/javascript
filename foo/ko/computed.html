@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input{
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            text-indent: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>computed</h1>
+
+<input type="text" data-bind="value:firstName" />
+<input type="text" data-bind="value:lastName" /><br /><br />
+<input type="text" data-bind="value:fullName" /><br />
+
+<script src="./jquery-1.11.1.min.js"></script>
+<script src="./knockout-3.2.0.js"></script>
+<script>
+    $(function(){
+        var viewModel = {
+            firstName : ko.observable(''),
+            lastName : ko.observable(''),
+            init : function(){
+                var self = this;
+
+                self.fullName = ko.computed({
+                    read : function(){
+                      return self.firstName() + ' ' + self.lastName();
+                    },
+                    write : function(newValue){
+                        self.firstName(newValue.split(' ')[0]);
+                        self.lastName(newValue.split(' ')[1]);
+                    },
+                    owner : self
+                });
+
+                ko.applyBindings(self);
+            }
+        };
+        viewModel.init();
+    })
+</script>
+</body>
+</html>

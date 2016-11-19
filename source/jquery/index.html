@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li a{
+            display: block;
+            margin:20px 0;
+        }
+        .box{
+            height:300px;
+            text-align: center;
+            outline:1px dashed #ff0000;
+        }
+        .box:after{
+            content:'';
+            display: inline-block;
+            height:100%;
+            width:0;
+            vertical-align: middle;
+        }
+        .box p{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<h1>测试</h1>
+<div class="box">
+    <p>居中测试</p>
+</div>
+<div class="p-box"></div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script>
+    $(function(){
+        var data = [
+            {
+                id: 1,
+                name:'1111'
+            },
+            {
+                id: 2,
+                name:'2222'
+            },
+            {
+                id: 3,
+                name:'3333'
+            },
+            {
+                id: 4,
+                name:'4444'
+            }
+        ];
+
+        var pBox = $('.p-box');
+
+        var temp='';
+
+        for(var i= 0,len=data.length;i<len;i++){
+            temp += '<p>'+data[i].name+'</p>';
+        }
+
+        pBox.append(temp);
+
+        for(var j= 0,l=data.length;j<l;j++){
+            $.data($('p')[j],'id',data[j].id);
+        }
+    })
+</script>
+</body>
+</html>

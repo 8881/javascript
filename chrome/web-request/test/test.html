@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        .btn{
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<button type="button" class="btn">ajax</button>
+<script src="../node_modules/zepto/dist/zepto.min.js"></script>
+<script>
+    $(function () {
+        $('.btn').on('click', function () {
+            $.ajax({
+                type: 'GET',
+                url: 'http://23.88.58.151:8887/webapi/tag',
+                // data to be added to query string:
+                data: {name: 'Zepto.js'},
+                // type of data we are expecting in return:
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (xhr, type) {
+                    console.log(xhr.response);
+                    console.log(type);
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

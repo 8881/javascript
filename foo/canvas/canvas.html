@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="drawing" width="400" height="400">no support...</canvas>
+
+<script>
+    var drawing = document.getElementById('drawing');
+    if(drawing.getContext){
+        var context = drawing.getContext('2d');
+    }else{
+        alert('no support..')
+    }
+</script>
+</body>
+</html>

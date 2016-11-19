@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
+    <!-- build:css -->
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <link href='scss/marxico.css' rel='stylesheet'>
+    <link rel="stylesheet" href="scss/style.css" />
+    <!-- endbuild -->
+</head>
+<body class="tab-page">
+<div class="cover">
+    <div class="title">
+        标题
+    </div>
+    <div class="sub-title">
+        副标题副标题
+    </div>
+    <div class="description">
+        描述描述描述描述
+    </div>
+    <div class="author">
+        @author place
+    </div>
+    <div class="mask"></div>
+    <div class="img"></div>
+</div>
+<div class="wrapper">
+    <div class="topbar clearfix">
+        <div class="logo fl">xxx.xxxx</div>
+        <div class="right fr">
+            <span>
+                <span>xxxx</span> &middot;
+                <a href="javascript:void(0);">退出</a>
+            </span>
+        </div>
+    </div>
+    <!--<div class="tab clearfix">
+        <div class="tag fl">
+            <a href="javascript:void(0);" class="cur">标签</a>
+            <span>&middot;</span>
+            <a href="javascript:void(0);">标签</a>
+            <span>&middot;</span>
+            <a href="javascript:void(0);">标签</a>
+            <span>&middot;</span>
+            <a href="javascript:void(0);">标签</a>
+        </div>
+        <a href="javascript:void(0);" class="review fr">查看往期</a>
+    </div>-->
+    <div class="content">
+        <div class="title">xxxxx</div>
+        <div class="tab-container clearfix">
+            <ul class="tab-nav fl">
+                <li>
+                    <a href="javascript:void(0);">xxxxx</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="active">xxxxx</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">xxxxx</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">xxxxx</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">xxxxx</a>
+                </li>
+            </ul>
+            <div class="tab-content fr">
+                <div class="tab-content-nav">
+                    <a href="javascript:void(0);" class="cur" data-id="1">标签</a>
+                    <span>&middot;</span>
+                    <a href="javascript:void(0);" data-id="2">标签</a>
+                    <span>&middot;</span>
+                    <a href="javascript:void(0);" data-id="3">标签</a>
+                </div>
+                <div class="tab-content-nav-content first">
+                    <p>111</p>
+                </div>
+                <div class="tab-content-nav-content">
+                    <p>222</p>
+                </div>
+                <div class="tab-content-nav-content">
+                    <p>333</p>
+                </div>
+                <div class="attention">
+                    Ares为清结算开发的数据中心，致力于为大家提供专业的数据查询、
+                        数据分析、及数据导出。以后还会不断优化，希望可以作为数据工具
+                        让大家的工作变得简单一点、清晰一点，可以很清楚的解决大家在工
+                        作中遇到的数据及算账问题，这就是我们的理念。
+                </div>
+                <p>Ares为清结算开发的数据中心，致力于为大家提供专业的数据查询、
+                    数据分析、及数据导出。以后还会不断优化，希望可以作为数据工具
+                    让大家的工作变得简单一点、<label>清晰一点</label>，可以很清楚的解决大家在工
+                    作中遇到的数据及算账问题，这就是我们的理念。</p>
+                <p>xxxxxxxxxxx</p>
+                <p>xxxxxxxxx</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix">
+       <div class="foot-nav fl">
+           <div class="slogan">
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           </div>
+           <ul class="nav-line">
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+           </ul>
+       </div>
+        <div class="qr fl">
+            <div class="wechat">
+                <p>我是大活人</p>
+            </div>
+            <div class="alipay">
+                <p>打赏一点吧</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var h = document.documentElement.clientHeight,
+            content = document.querySelector('.content');
+    content.style.minHeight= (h-210) + 'px';
+</script>
+<!-- build:js -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

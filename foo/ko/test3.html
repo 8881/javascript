@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onerror = function(){
+            return true;
+        }
+    </script>
+</head>
+<body>
+<h1>mapping的一个简单例子</h1>
+<input type="text" id="xxx" data-bind="textInput:model.num,event:{'propertychange':_handler}" style="width:300px;height:40px;line-height: 40px;text-indent:10px;" />
+
+<script src="./jquery-1.11.1.min.js"></script>
+<script src="./knockout-3.2.0.js"></script>
+<script src="./knockout.mapping-2.4.1.js"></script>
+<script>
+    $(function(){
+        var viewModel = {
+            timer : '',
+            imeKey : 229,
+            model : {
+                num : '24'
+            },
+            init : function(){
+                var self = this;
+                self.model = ko.mapping.fromJS(self.model);
+                ko.applyBindings(self);
+            },
+            _handler : function(data,event){
+                var e = event || window.event;
+                var target = e.target || e.srcElement;
+                var value = target.value, result = parseInt(value,10),temp;
+                if(isNaN(result)){
+                    temp = ''
+                }else{
+                    temp = result;
+                }
+
+                if(value != temp){
+                    target.value = temp;
+                }
+            }
+        };
+        viewModel.init();
+    })
+</script>
+</body>
+</html>

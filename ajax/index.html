@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/whatwg-fetch/fetch-compiled.js"></script>
+    <script>
+        //        const url = 'http://localhost:3008';
+        //        const url = 'http://b.test.com:3008';
+        const url = 'http://xx.xx.test.com:3008';
+        //                const url = 'http://a.foo.com:3008';
+        //        const url = 'http://a.b.foo.com:3008';
+    </script>
+</head>
+<body>
+<h2>ajax</h2>
+<h4>jquery</h4>
+<!--<button type="button" class="jq-get">get</button>-->
+<!--<button type="button" class="jq-post">post</button>-->
+<div class="xxx">
+    <div style="height:400px;outline: 1px solid red" class="yyy">
+        <p style="line-height:30px">ppppp</p>
+        <p>
+            <a data-id="1" class="aaa"><b>xxx</b></a>
+        </p>
+    </div>
+</div>
+
+<!--<h4>fetch</h4>-->
+<!--<button type="button" class="fc-post">get</button>-->
+<!--<button type="button" class="fc-post">post</button>-->
+
+<script src="jq.js"></script>
+<script src="fetch.js"></script>
+
+<script>
+    $(function () {
+        $('.xxx').on('click', function (e) {
+            console.log(e);
+            $('.xxx').off();
+            $('.aaa').off().on('click', function (e) {
+                e.stopPropagation();
+                console.log('hello world');
+            }).trigger('click');
+
+        })
+    })
+</script>
+</body>
+</html>

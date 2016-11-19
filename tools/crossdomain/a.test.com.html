@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a.test.com</title>
+    <script>
+        document.domain = 'test.com';
+    </script>
+</head>
+<body>
+<h3>a.test.com</h3>
+
+<p>子域可以通过设置document.domain来实现跨域</p>
+
+<p>通过隐藏的iframe可以获取到另一个子域的document</p>
+
+<p>eg:这个时候就可以取到b.test.com下的cookie</p>
+
+<hr>
+
+<p>本机测试方法</p>
+<p>host文件添加</p>
+<p>127.0.1.1 a.test.com</p>
+<p>127.0.1.1 b.test.com</p>
+
+<p>起一个服务,分别用两个域名打开这俩个页面,注意a页面中iframe引用b页面的路径</p>
+
+<script>
+    var ifr = document.createElement('iframe');
+    ifr.src = 'http://b.test.com:3002/b.test.com.html';
+    ifr.style.display = 'none';
+    document.body.appendChild(ifr);
+    ifr.onload = function () {
+        var doc = ifr.contentDocument || ifr.contentWindow.document;
+        console.log(doc.cookie);
+    }
+</script>
+</body>
+</html>

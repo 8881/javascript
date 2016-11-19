@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title>ko</title>
+    <script src="../jquery-1.11.1.min.js"></script>
+    <script src="./knockout-3.2.0.js"></script>
+    <script src="knockout.mapping-2.4.1.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>test</h1>
+<button id="testBtn">点击</button>
+<script>
+    $(function(){
+        var viewModel = {
+
+        };
+        $('#testBtn').one('click', function(){
+            $.ajax({
+                url : 'http://localhost:9500/index.php',
+                type : 'get',
+                /*jsonp : 'myback',    //jsonp句柄，服务端需对应指定
+                jsonpCallback : 'data',   //替换jquery返回的默认jquery+时间戳，没实际作用
+                dataType : 'jsonp',*/
+                success : function(data){
+                    console.log(data);
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

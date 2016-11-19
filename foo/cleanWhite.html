@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+<title>hello world</title>
+</head>
+<body>
+<h1>去除子节点中的空白，返回真正的子节点</h1>
+<ul id="list">
+	<!--注释-->
+	<li>子节点1</li>
+	<li>子节点2</li>
+	<li>子节点3</li>
+	<li>子节点4</li>
+	<li>子节点5</li>
+	<li>子节点6</li>
+</ul>
+<h2>/*  console查看结果  */</h2>
+
+
+<script type="text/javascript">
+	//去除空白
+	function cleanWhite(ele){
+		for(var i=0; i<ele.childNodes.length; i++){
+			var node = ele.childNodes[i];
+			if(node.nodeType == 3 && /\s/.test(node.nodeValue)){
+				node.parentNode.removeChild(node);
+			}
+		}
+	}
+
+    var list = document.getElementById('list');
+
+	console.time('时间');
+
+	console.group('未删除空白子节点');
+    console.log('子节点长度 ' + list.childNodes.length);
+	console.log(list.innerHTML);
+	console.groupEnd();
+
+	console.group('删除空白子节点');
+	cleanWhite(list);   // 调用删除空白函数
+	console.log('子节点长度 ' + list.childNodes.length);  
+	console.log(list.innerHTML);
+	console.groupEnd();
+
+	console.timeEnd('时间');
+</script>
+</body>
+</html>

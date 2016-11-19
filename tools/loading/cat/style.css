@@ -1,0 +1,116 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,tr,td {margin:0;padding:0; font-size:14px;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal}
+ol,ul {list-style:none}
+caption,th,td{text-align:center}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal}
+q:before,q:after {content:''}
+abbr,acronym { border:0}
+*{outline:none;}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+.page-loading{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    background: #3B539B;
+}
+.loading-box{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:200px;
+    height:200px;
+    margin:-100px 0 0 -100px;
+}
+.mouse{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:3px solid transparent;
+    border-left-color:#fff;
+    border-radius:100px;
+    animation: rotate 2s infinite linear;
+}
+.mouse em{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.cat{
+    position: absolute;
+    width:130px;
+    height:130px;
+    left:35px;
+    top:35px;
+}
+.cat .eye{
+    position: absolute;
+    top:20px;
+    width:50px;
+    height:50px;
+    background: #fff;
+    border-radius:25px;
+    animation: rotate 2s infinite linear;
+}
+.cat .eye.left {
+    left:10px;
+}
+.cat .eye.left:before{
+    content:'';
+    position: absolute;
+    left:10px;
+    top:10px;
+    width:16px;
+    height:16px;
+    border-radius:8px;
+    background: #333;
+}
+.cat .eye.right {
+    left:70px;
+}
+.cat .eye.right:before{
+    content:'';
+    position: absolute;
+    left:10px;
+    top:10px;
+    width:16px;
+    height:16px;
+    border-radius:8px;
+    background: #333;
+}
+.cat .mouth{
+    position: absolute;
+    top:100px;
+    left:50px;
+    right:50px;
+    height:3px;
+    background: #fff;
+}
+
+@keyframes rotate {
+    0%{
+        transform:rotateZ(0deg);
+    }
+    100%{
+        transform:rotateZ(360deg);
+    }
+}

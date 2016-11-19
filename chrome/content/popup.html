@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            width: 160px;
+            padding: 20px;
+            font-size: 15px;
+            color: #666;
+            box-sizing: border-box;
+        }
+
+        .rows {
+            line-height: 40px;
+        }
+
+        input[type=text] {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            width: 110px;
+            color: #666;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .error {
+            display: none;
+            font-size: 12px;
+            color: #f17172;
+            line-height: 20px;
+        }
+
+        button {
+            margin: 8px 0 0 0;
+            width: 60px;
+            height: 24px;
+            background: #fff;
+            color: #666;
+            border: 1px solid #e5e5e5;
+        }
+
+        input[disabled], button[disabled] {
+            background: #f1f1f1;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form>
+        <div class="rows">
+            <input type="checkbox" class="js-switch" id="switch"/> <label for="switch">开启拦截模式</label>
+        </div>
+        <div class="rows">
+            <input type="text" placeholder="端口" class="js-port" disabled/>
+            <p class="error js-error">&middot; 不能为空</p>
+        </div>
+        <div class="rows">
+            <button type="button" class="btn js-submit" disabled>确定</button>
+        </div>
+    </form>
+</div>
+<script src="js/popup.js"></script>
+</body>
+</html>

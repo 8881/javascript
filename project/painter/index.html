@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/jquery-ui-1.10.0.custom.css" />
+    <link rel="stylesheet" href="css/jquery.bigcolorpicker.css" />
+    <link rel="stylesheet" href="css/painter.css" />
+</head>
+<body>
+<div class="wrapper">
+    <div class="toolPanel">
+        <div data-bind="click:activePen">
+            <button type="button" class="btn btn-default">画笔</button>
+            <div id="pen-size-slider" style="width:400px;margin:0 10px;display: inline-block;"></div>
+            <input type="text" id="pen-size" data-bind="value:mode.pen_size()" style="width:40px;text-align: center;" />
+            <input type="text" id="pen-color-picker" data-bind="style:{background:mode.pen_color()}" style="margin:0 10px;width:52px;cursor:pointer;;border:0;" readonly />
+        </div>
+        <div data-bind="click:activeEraser">
+            <button type="button" class="btn btn-default" data-bind="">橡皮</button>
+            <div id="eraser-size-slider" style="width:400px;margin:0 10px;display: inline-block;"></div>
+            <input type="text" id="eraser-size" data-bind="value:mode.eraser_size()" style="width:40px;text-align: center;" />
+        </div>
+        <!--<div>
+            <button type="button" class="btn btn-default" data-bind="" disabled> + 添加文字</button>
+        </div>-->
+    </div>
+    <div class="setPanel" style="padding:10px 0;border-top:1px dashed #fff;">
+        <button class="btn btn-default" type="button" id="clearBtn" data-bind="click:clear">清除</button>
+        <!--<button class="btn btn-default" type="button" id="" data-bind="" disabled>撤销</button>
+        <button class="btn btn-default" type="button" id="" data-bind="" disabled>恢复</button>-->
+            <span style="margin:0 20px;color:#fff;">|</span>
+        <button class="btn btn-default" type="button" id="bg-color-picker" data-bind="value:mode.bg_color()">背景</button>
+        <div style="position: relative;display: inline-block;">
+            <button class="btn btn-default" type="button" id="canvaswh" data-bind="click:canvaswh">画布大小</button>
+            <div class="wh-list" style="position: absolute;top:35px;left:0;width:233px;height:70px;border:1px solid #ccc;background:#fff;z-index: 6666;padding:20px 10px;display: none;">
+                <form id="canvas-wh">
+                    <input type="radio" value="0" name="canvaswh" checked />&nbsp;&nbsp;长<input type="text" style="width:60px;" data-bind="textInput:mode.canvas_w" />px&nbsp;&nbsp;*&nbsp;&nbsp;宽&nbsp;&nbsp;<input type="text" style="width:60px;" data-bind="textInput:mode.canvas_h" />px<br />
+                    <button type="button" class="btn btn-default" data-bind="click:confirmwh">确定</button>
+                </form>
+            </div>
+        </div>
+        <span style="margin:0 20px;color:#fff;">|</span>
+        <button class="btn btn-default" type="button" id="playBtn" data-bind="click:playback,enable:mode.data().length>0">回放</button>
+        <button class="btn btn-default" data-toggle="modal" data-target=".modal" type="button" id="savePic" data-bind="click:savePic,enable:mode.data().length>0" disabled>保存</button>
+    </div>
+    <div class="canvas-container playback" style="position: relative;padding:5px" data-bind="style:{width:mode.canvas_w()+'px',height:mode.canvas_h()+'px'}">
+        <canvas id="canvas-bg" data-bind="attr:{'width':mode.canvas_w,'height':mode.canvas_h},style:{background:mode.bg_color()}" style="z-index:1111;position: absolute;left:0;top:0;"></canvas>
+        <canvas id="canvas" data-bind="attr:{'width':mode.canvas_w,'height':mode.canvas_h}" style="cursor:none;z-index:5555;position: absolute;left:0;top:0;background: transparent;"></canvas>
+        <canvas id="pen" data-bind="visible:mode.pen_status,attr:{width:mode.pen_size,height:mode.pen_size},style:{background:mode.pen_color(),'border-radius':'50%'}" style="z-index: 2222;position: absolute;display: none;"></canvas>
+        <canvas id="eraser" data-bind="visible:mode.eraser_status,attr:{width:mode.eraser_size,height:mode.eraser_size},style:{'border-radius':'50%'}" style="z-index: 3333;position: absolute;border:2px solid #333;border-radius:5px;display: none;"></canvas>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="js/jquery.bigcolorpicker.js"></script>
+<script src="js/knockout-3.3.0.js"></script>
+<script src="js/knockout.mapping-2.4.1.js"></script>
+<script src="js/painter.js"></script>
+</body>
+</html>

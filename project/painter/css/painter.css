@@ -1,0 +1,37 @@
+body {
+    background: #aaa;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.wrapper {
+    margin: 50px;
+}
+.toolbar {
+    margin: 20px 0;
+}
+
+.canvas-container {
+    position: relative;
+}
+
+.canvas-container #canvas-bg.playback {
+    border: 5px solid #484848;
+}
+
+.canvas-container #canvas {
+    background: #fff;
+    cursor: none;
+    position: absolute;
+    z-index: 1;
+}
+.ui-slider .ui-slider-range{
+    background-color: #27BA7D;background-image: none;
+}
+

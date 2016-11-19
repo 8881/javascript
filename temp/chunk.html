@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字</title>
+</head>
+<body>
+<h1>打字</h1>
+<script>
+    var num = 'Welcome! Ionic is a powerful HTML5 SDK that helps you build native-feeling mobile apps using web technologies like HTML, CSS, and Javascript.'+
+
+    'Ionic is focused mainly on the look and feel, and UI interaction of your app. That means we aren\'t a replacement for PhoneGap or your favorite Javascript framework. Instead, Ionic simply fits in well with these projects in order to simplify one big part of your app: the front end. We recommend reading Where does the Ionic Framework fit in? to get a good understanding of Ionic\'s goals.'+
+
+    'Ionic currently requires AngularJS in order to work at its full potential. While you can still use the CSS portion of the framework, you\'ll miss out on powerful UI interactions, gestures, animations, and other things.'+
+
+    'We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps.';
+
+    function chunk(arr, process, context){
+        setTimeout(function(){
+            var item = arr.shift();
+            process.call(context,item);
+
+            if(arr.length > 0){
+                setTimeout(arguments.callee, 100);
+            }
+        },100);
+    }
+
+    function addToPage(item){
+        var div = document.createElement('span');
+        div.innerHTML = item + '';
+        document.getElementsByTagName('body')[0].appendChild(div);
+    }
+
+    chunk(num.split(''), addToPage);
+</script>
+</body>
+</html>

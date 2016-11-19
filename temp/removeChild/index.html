@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	var head = document.getElementsByTagName('head')[0];
+	var xxx = document.createElement('script');
+
+	xxx.type = 'text/javascript';
+	xxx.src = './test.js';
+	xxx.async = true;
+
+	try{
+		head.removeChild(xxx);
+	}catch(e){
+		alert(e);
+	}
+
+</script>
+</body>
+</html>

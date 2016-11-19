@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog node api",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "markdown": "^0.5.0",
+    "marked": "^0.3.5",
+    "moment": "^2.10.6",
+    "mysql": "felixge/node-mysql",
+    "nodemon": "^1.4.1",
+    "pygmentize-bundled": "^2.3.0",
+    "lodash": "^3.10.1",
+    "md5": "^2.1.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,11 @@
+:root {
+    --red: #ff0000;
+}
+
+body {
+    background: color(var(--red) a(50%));
+}
+
+div {
+    background: grey(10%, 50%);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ftp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upload.js",
+  "scripts": {
+    "ftp": "node upload.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ftp-deploy": "^1.1.0"
+  }
+}

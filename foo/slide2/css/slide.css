@@ -1,0 +1,76 @@
+.wrapper{
+    width:962px;
+    margin:100px auto 0;
+    padding:0 0 50px;
+    border:2px solid #cccccc;
+}
+.P_slide{
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    width:960px;
+    overflow: hidden;
+    border:1px solid #0a8cd2;
+}
+.P_slide_container{
+    height:135px;
+    overflow:hidden;
+    position: relative;
+}
+.P_slide_img{
+    position: absolute;
+    left:0;
+    top:0;
+}
+.P_slide_img li{
+    display: block;
+    width:245px;
+    height:135px;
+    float:left;
+    position: relative;
+}
+.P_slide_img li span {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:215px;
+    height:40px;
+    background: #000;
+    filter:alpha(opacity=70);
+    opacity: 0.7;
+    text-align: left;
+    padding:0 5px;
+}
+.P_slide_img li span p{
+    font:14px/25px 'microsoft yahei';
+    color:#fff;
+}
+.P_slide_img li span em{
+    font:13px/15px 'SimSun';
+    color:#ccc;
+}
+.Q_slide{
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    width:960px;
+    overflow: hidden;
+    border:1px solid #0a8cd2;
+}
+.Q_slide_container{
+    height:75px;
+    overflow:hidden;
+    position: relative;
+}
+.Q_slide_img{
+    position: absolute;
+    left:0;
+    top:0;
+}
+.Q_slide_img li{
+    display: block;
+    width:163px;
+    height:75px;
+    float:left;
+    position: relative;
+}

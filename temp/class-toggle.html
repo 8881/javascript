@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .big{ font-size:50px; }
+        .bold{ font-weight:900; }
+        .color{ color:#ff0000 }
+    </style>
+</head>
+<body>
+<h1 class="big bold">classList toggle</h1>
+
+<button type="button" class="btn">红色</button>
+
+<script>
+    var btn = document.querySelector('.btn'),
+        h1 = document.querySelector('h1');
+    btn.addEventListener('click',function(){
+        h1.classList.toggle('color');
+    },false);
+</script>
+</body>
+</html>

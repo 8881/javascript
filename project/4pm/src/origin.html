@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初衷</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
+    <!-- build:css -->
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <link href='scss/marxico.css' rel='stylesheet'>
+    <link rel="stylesheet" href="scss/style.css" />
+    <!-- endbuild -->
+</head>
+<body class="words-page">
+<div class="cover">
+    <div class="title">
+        标题
+    </div>
+    <div class="sub-title">
+        副标题副标题
+    </div>
+    <div class="description">
+        描述描述描述描述
+    </div>
+    <div class="author">
+        @author place
+    </div>
+    <div class="mask"></div>
+    <div class="img"></div>
+</div>
+<div class="wrapper">
+    <div class="topbar clearfix">
+        <div class="logo fl">xxx.xxxx</div>
+        <div class="right fr">
+            <span>
+                <a href="javascript:void(0);">登录</a>/
+                <a href="javascript:void(0);">注册</a> &middot;
+                <a href="javascript:void(0);">初衷</a>
+            </span>
+        </div>
+    </div>
+    <div class="tab clearfix">
+        <div class="tag fl">
+            <a href="javascript:void(0);">返回首页</a>
+            <span>&middot;</span>
+            <a href="javascript:void(0);" class="cur">初衷</a>
+        </div>
+    </div>
+    <div class="content">
+        <p>xxxxxxxxxxxx<em>xxxx@xxx.xx</em>xxxxx</p>
+        <p>ssssssssssss</p>
+    </div>
+    <div class="footer clearfix">
+       <div class="foot-nav fl">
+           <div class="slogan">
+               xxxxxxxxxxxxxxxxxxxxxxxxx
+           </div>
+           <ul class="nav-line">
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+               <li>
+                   <a href="javascript:void(0);">xxxxxxx</a>
+               </li>
+           </ul>
+       </div>
+
+        <div class="qr fl">
+            <div class="wechat">
+                <p>我是大活人</p>
+            </div>
+            <div class="alipay">
+                <p>打赏一点吧</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var h = document.documentElement.clientHeight,
+            content = document.querySelector('.content');
+    content.style.minHeight= (h-261) + 'px';
+</script>
+<!-- build:js -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

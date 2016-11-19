@@ -1,0 +1,120 @@
+@charset "utf-8";
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+body {
+  background: #c8ba80 url(../images/error.png) center top no-repeat;
+}
+.layout {
+  margin: 0 auto;
+  width: 850px;
+}
+.info-top {
+  margin-top: 66px;
+  height: 140px;
+}
+.info-top p.info-title {
+  font: 180px/140px 'microsoft yahei';
+  color: #fff;
+}
+.info-top .info-back {
+  margin-top: 90px;
+}
+.info-top .info-back a {
+  display: block;
+  height: 50px;
+  width: 180px;
+  background: url(../images/zicon.png) -2px -1659px no-repeat;
+  font: 20px/50px 'microsoft yahei';
+  color: #fff;
+  text-indent: 30px;
+  text-decoration: none;
+}
+.info-top .info-back a:hover {
+  background-position: -2px -1717px;
+}
+.info-tip {
+  font: bold 18px/1 'microsoft yahei';
+  color: #ff7800;
+  margin: 20px 0 50px 0;
+  text-shadow: 0 0 5px #eee;
+}
+.info-iframe {
+  position: relative;
+  height: 470px;
+  overflow: hidden;
+  padding: 15px 100px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+.info-iframe .patch-left {
+  position: absolute;
+  left: 100px;
+  top: 25px;
+  width: 3px;
+  background: #fff;
+  height: 100%;
+}
+.info-iframe .patch-top {
+  position: absolute;
+  left: 35px;
+  top: 15px;
+  height: 27px;
+  background: #fff;
+  width: 780px;
+}
+.info-iframe .patch-right {
+  position: absolute;
+  right: 97px;
+  top: 25px;
+  width: 3px;
+  background: #fff;
+  height: 100%;
+}
+.info-iframe .patch-bottom {
+  position: absolute;
+  left: 0;
+  top: 370px;
+  width: 100%;
+  height: 140px;
+  background: #c8ba80;
+}
+.info-iframe .patch-bottom .patch-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.info-iframe .info-lost {
+  position: absolute;
+  left: 35px;
+  top: 5px;
+  width: 780px;
+  height: 100px;
+  background: #4c4c4c;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+.info-iframe .info-lost p {
+  font: 24px/80px 'microsoft yahei';
+}
+.info-iframe .info-lost p em {
+  font: 36px/80px 'microsoft yahei';
+}
+.info-iframe .info-lost ins {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #fff;
+}

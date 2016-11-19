@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/painter.css" />
+</head>
+<body>
+<div class="wrapper">
+    <div class="toolbar">
+        <button type="button" id="clearBtn">清除</button>
+        <button type="button" id="playBtn">回放</button>
+        <button type="button" id="textBtn">文字</button>
+        <button type="button" id="eraser">橡皮</button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="canvas" width="800" height="800"></canvas>
+        <div class="text-field">
+            <form>
+                <input type="text" class="text-input" />
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/msgbox.js"></script>
+<script src="js/painter.js"></script>
+</body>
+</html>

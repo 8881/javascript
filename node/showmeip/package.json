@@ -1,0 +1,13 @@
+{
+  "name": "showmeip",
+  "version": "1.0.19",
+  "description": "get local ip address",
+  "author": "countsheep",
+  "license": "ISC",
+  "bin": {
+    "ip": "./index.js"
+  },
+  "dependencies": {
+    "ip": "^1.1.3"
+  }
+}

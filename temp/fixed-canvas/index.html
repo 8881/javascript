@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position fixed failed when canvas exist</title>
+    <style>
+        body{
+            margin:0;
+        }
+        .container{
+            margin:50px 0 0 50px;
+            position: relative;
+            border:1px solid #ff0000;
+            height:300px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .fixed{
+            position: fixed;
+            left:0;
+            top:0;
+            height:200px;
+            line-height: 200px;
+            width:200px;
+            text-align: center;
+            background: rgba(35,66,200,.4);
+            color:#fff;
+            z-index:10;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="fixed">我是fixed的div</div>
+    <canvas width="300" height="300" id="drawing" class="cav"></canvas>
+</div>
+<script>
+    var drawing = document.getElementById('drawing');
+    if(drawing.getContext){
+        var context = drawing.getContext('2d');
+        context.strokeStyle = "blue";
+        context.strokeRect(50,50,200,200);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="play">播放</button>
+<button id="pause">暂停</button>
+<audio src="http://mat1.gtimg.com/ent/xiah/jay/jay3.mp3" loop="loop"></audio>
+
+<script>
+    var mp3 = document.querySelector('audio');
+    var play = document.getElementById('play');
+    var pause = document.getElementById('pause');
+
+    play.onclick = function(){
+        mp3.play();
+    };
+    pause.onclick = function(){
+        mp3.pause();
+    };
+</script>
+</body>
+</html>

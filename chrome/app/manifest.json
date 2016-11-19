@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "chrome app",
+  "version": "0.1.0",
+  "description": "chrome app",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    }
+  },
+  "permissions": [
+    "webview",
+    "system.network",
+    "<all_urls>"
+  ],
+  "sockets": {
+    "tcp": {
+      "connect": ""
+    },
+    "tcpServer": {
+      "listen": ""
+    }
+  }
+}

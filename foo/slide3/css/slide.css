@@ -1,0 +1,62 @@
+.slideContainer {
+    width: 475px;
+    height: 265px;
+}
+.S-box {
+    position: relative;
+    width: 475px;
+    height: 265px;
+    overflow: hidden;
+    background: #fff;
+}
+.S-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display:none;
+}
+.S-bar{
+    position: absolute;
+    bottom:0;
+    left:0;
+    height:36px;
+    line-height: 36px;
+    width:475px;
+    background:rgba(0,0,0,0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = "#60000000",endColorstr = "#60000000");
+}
+.S-bar .item-title{
+    height:36px;
+    float: left;
+    margin:0 20px;
+    color:#fff;
+}
+.S-bar .item-title p{
+    width:320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.S-bar .item-num{
+    overflow: hidden;
+    padding:13px 0;
+    height:20px;
+}
+.S-bar .item-num a{
+     display: block;
+     float:left;
+     width:10px;
+     text-align: center;
+     height:10px;
+     line-height: 10px;
+     background: #fff;
+     margin-left:10px;
+ }
+.S-bar .item-num a.active,
+.S-bar .item-num a:hover
+{
+    background: #aaa;
+}
+.S-bar .item-num a em{
+    display: none;
+}

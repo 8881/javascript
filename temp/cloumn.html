@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .test{
+            width:100%;
+            -webkit-columns:90px 3;
+            columns:90px 3;
+            column-fill:balance;
+        }
+    </style>
+</head>
+<body>
+<div class="test">
+    <p>This module describes multi-column layout in CSS. By using functionality
+        described in this document, style sheets can declare that the content of
+        an element is to be laid out in multiple columns.On the Web, tables have also
+        been used to describe multi-column layouts. The main benefit of using CSS-based
+        columns is flexibility; content can flow from one column to another, and the number
+        of columns can vary depending on the size of the viewport. Removing presentation table
+        markup from documents allows them to more easily be presented on various output devices
+        including speech synthesizers and small mobile devices.</p>
+</div>
+
+
+<script>
+    /*var foo = function(i){
+        var sum;
+        if(i<1){
+            return 1;
+        }else{
+            sum = i* arguments.callee(i-1);
+        }
+        return sum;
+    };*/
+
+    var foo = function f(i){
+        var sum;
+        if(i<1){
+            return 1;
+        }else{
+            sum = i* f(i-1);
+        }
+        return sum;
+    };
+    alert(foo(3));
+
+    Object.observe(window,function(){
+        alert();
+    });
+</script>
+</body>
+</html>

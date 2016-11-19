@@ -1,0 +1,105 @@
+body {
+  background: #1b2f52; }
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -500px;
+  margin-top: -430px;
+  width: 1000px;
+  height: 860px;
+  background: url(../images/bg.png) 50% 50% no-repeat; }
+  .container .purple {
+    position: absolute;
+    left: 100px;
+    top: 166px;
+    width: 233px;
+    height: 183px;
+    background: url(../images/purple.png) no-repeat;
+    animation: purple 2s ease-in-out;
+    -webkit-animation: purple 2s ease-in-out; }
+  .container .red {
+    position: absolute;
+    left: 676px;
+    top: 482px;
+    width: 279px;
+    height: 218px;
+    background: url(../images/red.png) no-repeat;
+    animation: red 2s ease-in-out;
+    -webkit-animation: red 2s ease-in-out; }
+  .container .circle {
+    position: absolute;
+    left: 790px;
+    top: 0;
+    width: 212px;
+    height: 212px;
+    background: url(../images/circle.png) no-repeat;
+    animation: circle 15s linear infinite;
+    -webkit-animation: circle 15s linear infinite; }
+  .container .text-box {
+    position: absolute;
+    left: 167px;
+    top: 675px;
+    width: 348px;
+    height: 61px;
+    background: url(../images/text-box.png) no-repeat; }
+  .container .mark-1 {
+    position: absolute;
+    left: 470px;
+    top: 400px;
+    width: 24px;
+    height: 33px;
+    background: url(../images/mark-1.png) no-repeat; }
+  .container .mark-2 {
+    position: absolute;
+    left: 664px;
+    top: 307px;
+    width: 33px;
+    height: 32px;
+    background: url(../images/mark-2.png) no-repeat; }
+
+@keyframes purple {
+  from {
+    left: 0;
+    top: 66px; }
+  to {
+    left: 100px;
+    top: 166px; } }
+@-webkit-keyframes purple {
+  from {
+    left: 0;
+    top: 66px; }
+  to {
+    left: 100px;
+    top: 166px; } }
+@keyframes red {
+  from {
+    left: 720px;
+    top: 621px; }
+  to {
+    left: 676px;
+    top: 482px; } }
+@-webkit-keyframes red {
+  from {
+    left: 720px;
+    top: 621px; }
+  to {
+    left: 676px;
+    top: 482px; } }
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  to {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes circle {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  to {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(360deg); } }
+
+/*# sourceMappingURL=style.css.map */

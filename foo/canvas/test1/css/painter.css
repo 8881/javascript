@@ -1,0 +1,39 @@
+body {
+  background: #888; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.wrapper {
+  margin: 20px auto;
+  width: 800px; }
+
+.toolbar {
+  margin: 20px 0; }
+
+.canvas-container {
+  position: relative; }
+  .canvas-container #canvas {
+    background: #fff;
+    cursor: url(../images/pen.ico), default;
+    position: absolute;
+    z-index: 1; }
+  .canvas-container .text-field {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    min-height: 40px;
+    z-index: 2;
+    display: none; }
+    .canvas-container .text-field .text-input {
+      border: 1px solid #ccc;
+      width: 200px;
+      line-height: 40px;
+      text-indent: 5px;
+      font: 16px/40px 'microsoft yahei'; }
+
+/*# sourceMappingURL=painter.css.map */

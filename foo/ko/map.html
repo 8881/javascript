@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>mapping的一个简单例子</h1>
+<input type="text" data-bind="value:model.one" />
+<input type="text" data-bind="value:model.two" />
+<label data-bind="visible:three(),text:three()"></label>
+
+<script src="../jquery-1.11.1.min.js"></script>
+<script src="./knockout-3.2.0.js"></script>
+<script src="./knockout.mapping-2.4.1.js"></script>
+<script>
+$(function(){
+    var viewModel = {
+        model : {
+            one : '',
+            two : ''
+        },
+        init : function(){
+            var self = this;
+            self.model = ko.mapping.fromJS(self.model);
+            ko.applyBindings(self);
+        },
+        three : function(){
+            return parseInt(this.model.one(),10) + parseInt(this.model.two(),10);
+        }
+    };
+    viewModel.init();
+})
+</script>
+</body>
+</html>

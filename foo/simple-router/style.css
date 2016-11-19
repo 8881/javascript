@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    width: 100px;
+}
+
+.container {
+    margin: 50px 0 0 0;
+    height: 200px;
+}

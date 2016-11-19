@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul id="list">
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+    <li>xxxxxxxxxxx</li>
+</ul>
+<script>
+    //  错误的写法
+    var handler_x = function(node){
+        for(var i=0; i<node.length; i++){
+            node[i].onclick = function(){
+                console.log(i);
+            }
+        }
+    };
+
+    handler_x(document.querySelectorAll('li'));
+
+
+
+    // 正确的写法，避免再循环中创建函数，会导致混淆
+    var handler = function(node){
+        var helper = function(x){
+            return function(){
+                console.log(x);
+            }
+        };
+
+        for(var i=0;i<node.length;i++){
+            node[i].onclick = helper(i);
+        }
+    };
+    handler(document.querySelectorAll('li'));
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Google 桌面通知</title>
+    <meta name="author" content="87cool.com" />
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+</head>
+<body>
+
+<button id='btnTip' onclick="notify()">显示桌面通知</button>
+
+
+<script type="text/javascript">
+    function notify() {
+        if (window.webkitNotifications) {
+            if (window.webkitNotifications.checkPermission() == 0) {
+                var notification_test = window.webkitNotifications.createNotification("http://ecmad.com/public/dist/images/head.png", '111111111111', '222222222222');
+                notification_test.replaceId = '87cool';
+                notification_test.show();
+            } else {
+                window.webkitNotifications.requestPermission(notify);
+            }
+        }
+    }
+</script>
+</body>
+</html>

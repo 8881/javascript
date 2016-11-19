@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<h1>ajax拦截请求测试</h1>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+
+    var blocker_response = {
+        code: 200,
+        msg: "success",
+        data: {
+            id: 1,
+            name: "g.j"
+        }
+    };
+
+    $.ajax({
+        type: 'GET',
+        url: 'http://23.88.58.151:8887/webapi/tag',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (xhr, type) {
+            console.log(xhr.response);
+            console.log(type);
+        }
+    });
+
+
+    $.ajax({
+        type: 'GET',
+        url: 'http://23.88.58.151:8887/webapi/home?page_size=5&cur_page=1',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (xhr, type) {
+            console.log(xhr.response);
+            console.log(type);
+        }
+    });
+
+
+</script>
+</body>
+</html>

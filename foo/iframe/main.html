@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+        .topbar{
+            height:50px;
+            border-bottom: 1px solid #ccc;
+        }
+        .slidebar{
+            width:200px;
+            height:800px;
+            border-right: 1px solid #ccc;
+        }
+        .slidebar ul li a{
+            display: block;
+            width:200px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-bottom: 1px dashed #ccc;
+            margin: 2px 0;
+        }
+        .main{
+            position: absolute;
+            top: 51px;
+            left: 201px;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            overflow: hidden;
+            padding-bottom: 0;
+        }
+        .main iframe{
+            width:100%;
+            height:100%;
+        }
+        .fl{
+            float:left;
+        }
+        .fr{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+<div class="topbar">
+    <h1 style="font:24px/2 'microsoft yahei'">header</h1>
+</div>
+<div class="slidebar fl">
+    <ul>
+        <li><a href="javascript:void(0);" data-href="page1.html" target="mainiframe">page1</a></li>
+        <li><a href="javascript:void(0);" data-href="page2.html" target="mainiframe">page2</a></li>
+        <li><a href="javascript:void(0);" data-href="page3.html" target="mainiframe">page3</a></li>
+    </ul>
+</div>
+<div class="main fl">
+    <iframe id="mainiframe" name="mainiframe" frameborder="0" allowtransparency="true" src="page1.html"></iframe>
+</div>
+<script src="../jquery-1.11.1.min.js"></script>
+<script src="./js/cookie.js"></script>
+<script>
+$(function(){
+    Cookie.setCookie('iframe','page1.html',30,'/');
+
+    $('.slidebar ul li a').on('click',function(){
+        if(Cookie.getCookie('iframe') == 'page1.html'){
+            if(confirm('确定离开？')){
+                var href = $(this).attr('data-href');
+                Cookie.setCookie('iframe',href,30,'/');
+                $(this).attr('href',href);
+            }else{
+                $(this).attr('href','javascript:void(0);');
+            }
+        }else{
+            var href = $(this).attr('data-href');
+            Cookie.setCookie('iframe',href,30,'/');
+            $(this).attr('href',href);
+        }
+
+
+    })
+});
+</script>
+</body>
+</html>

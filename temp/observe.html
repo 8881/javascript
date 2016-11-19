@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.observe</title>
+</head>
+<body>
+<h1>Object.observe</h1>
+
+<script>
+    var foo = {
+        a:1,
+        b:2,
+        c: function(){
+            return 3;
+        }
+    };
+
+    Object.observe(foo,function(val){
+        console.log(val);
+    });
+
+    setTimeout(function(){
+        foo.a = 111;
+    },1000);
+
+    setTimeout(function(){
+        delete foo.b;
+    },2000);
+</script>
+</body>
+</html>

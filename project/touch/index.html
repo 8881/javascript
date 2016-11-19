@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Title</title>
+</head>
+<body>
+<h2>
+	禁用滑动
+</h2>
+
+<div class="container" style="width:300px;height:500px;border:1px solid #ff0000;"></div>
+
+
+<script src="node_modules/zepto/zepto.min.js"></script>
+<script>
+
+	document.addEventListener('touchmove',function(e){
+		e.preventDefault();
+	},false);
+
+	var container = document.querySelector('.container');
+
+	container.addEventListener('touchmove',function(e){
+		alert('yes.');
+	},false);
+
+</script>
+</body>
+</html>

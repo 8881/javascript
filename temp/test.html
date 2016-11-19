@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="xxx"></p>
+<script>
+    (function(){
+        var a = document.querySelector('#xxx');
+        a.innerHTML = 'aaaaaa';
+    })()   //此处不加分号会导致报错
+
+    (function(){
+        var b = document.querySelector('#xxx');
+        b.innerHTML = 'bbbbbb';
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>xxx</h1>
+<ul>
+    <li><a href="javascript:void(0);" data-bind="click:query('11')">11</a></li>
+    <li><a href="javascript:void(0);" data-bind="click:query('22')">22</a></li>
+    <li><a href="javascript:void(0);" data-bind="click:query('33')">33</a></li>
+    <li><a href="javascript:void(0);" data-bind="click:query('44')">44</a></li>
+</ul>
+
+<!--<script src="../jquery-1.11.1.min.js"></script>-->
+<script src="./knockout-3.2.0.js"></script>
+<script src="./knockout.mapping-2.4.1.js"></script>
+<script>
+
+        var viewModel = {
+
+            init : function(){
+                var self = this;
+                self.model = ko.mapping.fromJS(self.model);
+                ko.applyBindings(self);
+            },
+            query : function(arg){
+                console.log(arg);
+            }
+        };
+        viewModel.init();
+
+</script>
+</body>
+</html>
