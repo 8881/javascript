@@ -3,9 +3,7 @@
 const http = require('http');
 
 const server = http.createServer(function (req, res) {
-  res.end('hello koa.');
+  res.end('hello node.');
 });
 
-server.listen(3003, function () {
-  console.log('[server] http://localhost:3003');
-});
+server.listen(3000);
