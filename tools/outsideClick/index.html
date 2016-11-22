@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>监听元素外部点击事件</title>
+</head>
+<body>
+<div style="width:200px;height:200px;outline:1px dotted #ff2a00" class="ele">
+    <!-- 目标元素div -->
+</div>
+
+<div style="margin-top:30px;" class="log">
+    <!-- 输出 -->
+</div>
+
+<script>
+  var log = document.querySelector('.log');
+  var ele = document.querySelector('.ele');
+  document.addEventListener('click', function (e) {
+    if (e.target.className === 'ele') {
+      var p1 = document.createElement('p');
+      p1.innerText = '内部被点击';
+      log.appendChild(p1);
+    } else {
+      // 判断事件目标元素是否在 ele 元素内部
+      if (!ele.contains(e.target)) {
+        var p2 = document.createElement('p');
+        p2.innerText = '外部被点击';
+        p2.style.color = '#ff0000';
+        log.appendChild(p2);
+      }
+    }
+  })
+</script>
+</body>
+</html>
