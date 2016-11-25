@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <style>
+        html, body, video {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container:before, .container:after {
+            content: '';
+            display: table;
+        }
+
+        .container:after {
+            clear: both;
+        }
+
+        .fix-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 80px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .fix-nav ul li {
+            display: inline-block;
+            margin: 0 20px 0 0;
+            width: 100px;
+            text-align: center;
+        }
+
+        .fix-nav a {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .rows {
+            position: relative;
+            width: 100%;
+        }
+
+        video {
+            position: absolute;
+            min-height: 100%;
+            min-width: 100%;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            vertical-align: baseline;
+        }
+    </style>
+</head>
+<body>
+<nav class="fix-nav">
+    <div class="container">
+        <ul>
+            <li>
+                <a href="#home">home</a>
+            </li>
+            <li>
+                <a href="#about">about</a>
+            </li>
+            <li>
+                <a href="#content">content</a>
+            </li>
+            <li>
+                <a href="#contact">contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section class="container" id="home">
+    <div class="rows">
+        <video autoplay="" loop="" muted="" class="video-content">
+            <source src="video/vid.webm" type="video/webm">
+            <source src="video/vid.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+<section class="container" id="about">
+    <h1>about</h1>
+</section>
+<section class="container" id="content">
+    <h1>content</h1>
+</section>
+<section class="container" id="contact">
+    <h1>contact</h1>
+</section>
+</body>
+</html>
