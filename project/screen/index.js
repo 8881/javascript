@@ -1,16 +1,6 @@
 'use strict';
 
 const nav = document.querySelector('.nav');
-nav.addEventListener('click', e => {
-  console.log(e.target.nodeName);
-  if (e.target.nodeName === 'A') {
-    const href = e.target.getAttribute('data-href');
-    const target = document.querySelector(href);
-    const to = target.offsetTop;
-    const from = document.body.scrollTop;
-    scroll(from, to);
-  }
-}, false);
 
 function scroll(from, to, interval) {
   const _interval = interval ? interval : 200;
@@ -30,3 +20,14 @@ function scroll(from, to, interval) {
 
   requestAnimationFrame(loop);
 }
+
+nav.addEventListener('click', e => {
+  console.log(e.target.nodeName);
+  if (e.target.nodeName === 'A') {
+    const href = e.target.getAttribute('data-href');
+    const target = document.querySelector(href);
+    const to = target.offsetTop;
+    const from = document.body.scrollTop;
+    scroll(from, to);
+  }
+}, false);
