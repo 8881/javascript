@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>childNodes & children</title>
+</head>
+<body>
+<h2>childNodes & children</h2>
+<ul id="list">
+    <!--注释-->
+    <li>子节点1</li>
+    <li>子节点2</li>
+    <li>子节点3</li>
+    <li>子节点4</li>
+    <li>子节点5</li>
+    <li>子节点6</li>
+</ul>
+<textarea rows="10" cols="50">
+    <ul id="lists">
+        <!--注释-->
+        <li>子节点1</li>
+        <li>子节点2</li>
+        <li>子节点3</li>
+        <li>子节点4</li>
+        <li>子节点5</li>
+        <li>子节点6</li>
+    </ul>
+</textarea>
+
+<h2>console查看结果</h2>
+
+<p>[childNodes] 子节点长度 15</p>
+<p>[children] 6</p>
+
+
+<script type="text/javascript">
+
+  let list = document.getElementById('list');
+
+  //去除childNode中的空白
+  function cleanWhite(ele) {
+    for (let i = 0; i < ele.childNodes.length; i++) {
+      const node = ele.childNodes[i];
+      if (node.nodeType === 3 && /\s/.test(node.nodeValue)) {
+        node.parentNode.removeChild(node);
+      }
+    }
+  }
+
+  console.log('[childNodes] 子节点长度 ' + list.childNodes.length);
+
+  // cleanWhite(list);
+
+  console.log('[children] ' + list.children.length);
+
+</script>
+</body>
+</html>

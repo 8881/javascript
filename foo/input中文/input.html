@@ -28,32 +28,32 @@
 
 <script>
 
-    function keyup(val) {
-        var p = document.createElement('p');
-        p.innerText = 'onkeyup - ' + val;
-        content.appendChild(p);
-    }
+  function keyup(val) {
+    var p = document.createElement('p');
+    p.innerText = 'onkeyup - ' + val;
+    content.appendChild(p);
+  }
 
 
-    var input = document.querySelector('.input');
-    var content = document.querySelector('.content');
+  var input = document.querySelector('.input');
+  var content = document.querySelector('.content');
 
-    //    input.addEventListener('compositionstart',function(){
-    //        console.log('compositionstart - ' + input.value);
-    //    },false);
+  //    input.addEventListener('compositionstart',function(){
+  //        console.log('compositionstart - ' + input.value);
+  //    },false);
 
 
-    input.addEventListener('compositionend', function () {
-        var p = document.createElement('p');
-        p.innerText = 'compositionend - ' + input.value;
-        content.appendChild(p);
-    }, false);
+  input.addEventListener('compositionend', function () {
+    var p = document.createElement('p');
+    p.innerText = 'compositionend - ' + input.value;
+    content.appendChild(p);
+  }, false);
 
-    input.addEventListener('keyup', function () {
-        var p = document.createElement('p');
-        p.innerText = 'keyup - ' + input.value;
-        content.appendChild(p);
-    }, false);
+  input.addEventListener('keyup', function () {
+    var p = document.createElement('p');
+    p.innerText = 'keyup - ' + input.value;
+    content.appendChild(p);
+  }, false);
 
 </script>
 </body>
