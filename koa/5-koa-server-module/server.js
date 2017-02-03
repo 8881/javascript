@@ -12,4 +12,4 @@ server.listen(4000,()=>{
   console.log(`[server] http://localhost:4000`);
 });
 
-// node server.js
+// node index.js
