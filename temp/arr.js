@@ -3,12 +3,12 @@
  */
 
 //拍平数组 递归 闭包
-var arr = [1,[2],[3,4,5],6];
+const arr = [1,[2],[3,4,5],6];
 
-var foo1 = function(){
-  var newArr = [];
+const foo1 = function(){
+  const newArr = [];
 
-  var f = function(arr){
+  const f = function(arr){
     arr.forEach(function(item){
       Array.isArray(item)?f(item):newArr.push(item);
     });
