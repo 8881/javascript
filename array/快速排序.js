@@ -5,7 +5,7 @@
 const arr = [3, 6, 2, 9, 5, 1, 4, 8, 7];
 
 const foo = function (arr) {
-	if (arr.length === 1) {
+	if (arr.length <= 1) {
 		return arr;
 	}
 
@@ -21,6 +21,7 @@ const foo = function (arr) {
 			right.push(arr[i]);
 		}
 	}
+
 	return foo(left).concat([middle], foo(right));
 };
 
