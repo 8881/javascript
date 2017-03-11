@@ -3,7 +3,7 @@
  */
 
 const a = [1, 3, 5, 6, 8];
-const b = [2, 6, 9];
+const b = [1, 2, 6, 9];
 
 let i = 0;
 let j = 0;
